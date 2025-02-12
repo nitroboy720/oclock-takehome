@@ -1,0 +1,36 @@
+{
+    "quoteNumber": "Q-2024-001",
+    "createdAt": "2024-03-19T10:30:00Z",
+    "company": {
+        "name": "Acme Inc.",
+        "address": "123 Main St, Anytown, USA",
+        "phone": "123-456-7890",
+        "email": "info@acmeinc.com"
+    },
+    "client": {
+        "name": "John Doe",
+        "address": "456 Oak Ave, Anytown, USA",
+        "phone": "123-456-7890",
+        "email": "john.doe@example.com"
+    },
+    "lineItems": [
+        {
+            "id": "1",
+            "name": "Web Development",
+            "quantity": 10,
+            "unitPrice": 100.00,
+            "total": 1000.00
+        },
+        {
+            "id": "2",
+            "name": "UI Design",
+            "quantity": 5,
+            "unitPrice": 80.00,
+            "total": 400.00
+        }
+    ],
+    "subtotal": 1400.00,
+    "taxRate": 0.20,
+    "taxAmount": 280.00,
+    "total": 1680.00
+}
