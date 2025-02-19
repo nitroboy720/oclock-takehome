@@ -20,6 +20,10 @@
     function cancelEditing() {
         editId = null;
     }
+
+    function handleSubmit() {
+        editId = null;
+    }
 </script>
 
 <div>
@@ -37,11 +41,11 @@
             {#each data.products as product}
                 <tr>
                   {#if editId === product.id}
-                    <td><input type="text" bind:value={editName} /></td>
+                    <td><input type="text" bind:value={editName} maxlength="25" /></td>
                     <td><input type="number" bind:value={editQuantity} min="1" /></td>
                     <td><input type="number" bind:value={editPrice} min="0" /></td>
                     <td>
-                        <form method="POST" action="?/editProduct" use:enhance>
+                        <form method="POST" action="?/editProduct" use:enhance on:submit={handleSubmit}>
                             <input type="hidden" name="id" value={product.id} />
                             <input type="hidden" name="name" value={editName} />
                             <input type="hidden" name="quantity" value={editQuantity} />
@@ -57,7 +61,6 @@
                         <td>${product.quantity * product.unitPrice}</td>
                         <td>
                             <button class="button is-primary" on:click={() => startEditing(product)}>Edit Item</button>
-                            
                         </td>
                         <td>
                             <form method="POST" action="?/deleteProduct" use:enhance>

@@ -16,7 +16,7 @@
 
     <h2 class="title is-4">Add Product/ Service</h2>
 
-    <form method="POST" action="?/create" use:enhance>
+    <form method="POST" action="?/createProduct" use:enhance>
         <label>
 		    Name of the product or service: 
 		    <input name="name" bind:value={name} type="text" required maxlength="25" placeholder="Name"/>
@@ -27,7 +27,7 @@
         </label>
         <label>
             Price per unit (CAD$):
-            <input name="unitPrice" bind:value={unitPrice} type="number" required min="0" placeholder="Unit Price" />
+            <input name="price" bind:value={unitPrice} type="number" required min="0" placeholder="Unit Price" />
         </label>
         <button class="button is-primary"> Add Line Item </button>
     </form>
